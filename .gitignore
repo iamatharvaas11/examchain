@@ -1,0 +1,65 @@
+# EXAMCHAIN — Secure Examination Paper Distribution
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+/build
+/dist
+target/
+*.jar
+*.war
+*.class
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment (NEVER commit secrets)
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Docker
+docker-compose.override.yml
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintcache
+
+# Backend
+backend/target/
+
+# Blockchain
+blockchain/network/organizations/peerOrganizations/
+blockchain/network/organizations/ordererOrganizations/
+blockchain/network/channel-artifacts/
+
+# Vault (dev tokens)
+infrastructure/vault/data/
+
+# MinIO data
+infrastructure/minio/data/
+
+# PostgreSQL data
+infrastructure/postgres/data/
+
+# Coverage
+coverage/
+*.lcov
+
