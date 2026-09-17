@@ -18,8 +18,8 @@ EXAMCHAIN is an end-to-end secure examination paper lifecycle platform that prot
 
 | Component | Technology |
 |---|---|
-| Frontend | React 18, TypeScript, Vite, Tailwind CSS, Shadcn/ui |
-| Backend | Spring Boot 3.2, Java 17, Maven |
+| Frontend | React 18, TypeScript 5, Vite 5, Tailwind CSS 3, Shadcn/ui |
+| Backend | Spring Boot 4.1.x, Java 25, Maven 3.9+ |
 | Database | PostgreSQL 16 |
 | Identity (Phase 2) | Keycloak 24 |
 | Object Storage (Phase 4) | MinIO |
@@ -32,10 +32,10 @@ EXAMCHAIN is an end-to-end secure examination paper lifecycle platform that prot
 
 ### Prerequisites
 
-- [Docker](https://docs.docker.com/get-docker/) and Docker Compose
+- [Docker](https://docs.docker.com/get-docker/) and Docker Compose (optional for local standalone dev)
 - [Node.js 20+](https://nodejs.org/) (for frontend development)
-- [Java 17+](https://adoptium.net/) (for backend development)
-- [Maven 3.9+](https://maven.apache.org/) (for backend builds)
+- [Java 25+](https://adoptium.net/) (for backend development)
+- [Maven 3.9+](https://maven.apache.org/) (or use included `./mvnw`)
 
 ### 1. Clone and configure
 
@@ -117,7 +117,7 @@ Expected response:
 
 ```
 EXAMCHAIN/
-├── backend/              # Spring Boot API (Java 17)
+├── backend/              # Spring Boot API (Java 25)
 │   ├── src/main/java/    # Application source
 │   ├── src/main/resources/  # Configuration & migrations
 │   ├── src/test/         # Tests

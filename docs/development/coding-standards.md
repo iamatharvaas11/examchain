@@ -2,7 +2,7 @@
 
 ## General
 
-- **Language versions:** Java 17, TypeScript 5, Go 1.21+ (chaincode)
+- **Language & Framework versions:** Java 25, Spring Boot 4.1.x, TypeScript 5, Go 1.21+ (chaincode)
 - **No hardcoded secrets.** All configuration via environment variables or Vault.
 - **No `System.out.println` for logging.** Use SLF4J (`@Slf4j` / `LoggerFactory`).
 - **Write tests.** Every module requires unit tests. Security modules require negative tests.
