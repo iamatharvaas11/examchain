@@ -52,13 +52,15 @@ class SecurePrintingTest {
         ledgerService = Mockito.mock(FabricLedgerService.class);
 
         fingerprintService = new DeviceFingerprintService(terminalRepository);
+        com.examchain.incident.service.FreezeModeService freezeModeService = Mockito.mock(com.examchain.incident.service.FreezeModeService.class);
         printingService = new SecurePrintingService(
                 terminalRepository,
                 printAuditLogRepository,
                 releaseScheduleRepository,
                 fingerprintService,
                 generationService,
-                ledgerService
+                ledgerService,
+                freezeModeService
         );
 
         when(printAuditLogRepository.save(any(PrintAuditLogEntity.class))).thenAnswer(i -> i.getArgument(0));

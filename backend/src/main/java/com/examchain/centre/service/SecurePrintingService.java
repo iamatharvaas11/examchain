@@ -34,6 +34,7 @@ public class SecurePrintingService {
     private final DeviceFingerprintService fingerprintService;
     private final DynamicPaperGenerationService generationService;
     private final FabricLedgerService ledgerService;
+    private final com.examchain.incident.service.FreezeModeService freezeModeService;
 
     private final SecureRandom secureRandom = new SecureRandom();
 
@@ -44,7 +45,8 @@ public class SecurePrintingService {
             ReleaseScheduleRepository releaseScheduleRepository,
             DeviceFingerprintService fingerprintService,
             DynamicPaperGenerationService generationService,
-            FabricLedgerService ledgerService
+            FabricLedgerService ledgerService,
+            com.examchain.incident.service.FreezeModeService freezeModeService
     ) {
         this.terminalRepository = terminalRepository;
         this.printAuditLogRepository = printAuditLogRepository;
@@ -52,6 +54,7 @@ public class SecurePrintingService {
         this.fingerprintService = fingerprintService;
         this.generationService = generationService;
         this.ledgerService = ledgerService;
+        this.freezeModeService = freezeModeService;
     }
 
     @Transactional
@@ -71,6 +74,11 @@ public class SecurePrintingService {
 
     @Transactional
     public SecurePrintResponse executeSecurePrint(String paperId, SecurePrintRequest request) {
+        // 0. System Freeze check
+        if (freezeModeService != null) {
+            freezeModeService.assertNotFrozen();
+        }
+
         // 1. Release Status & Time-lock check
         ReleaseScheduleEntity schedule = releaseScheduleRepository.findByPaperId(paperId)
                 .orElseThrow(() -> new ResourceNotFoundException("No release schedule found for paper: " + paperId));
