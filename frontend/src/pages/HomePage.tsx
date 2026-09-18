@@ -32,6 +32,14 @@ export function HomePage() {
         <p className="text-xl text-slate-600 max-w-2xl mx-auto">
           The next-generation secure examination platform built on blockchain technology for unparalleled transparency and trust.
         </p>
+        <div className="pt-2">
+          <a
+            href="/login"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-xl font-semibold shadow-sm hover:bg-primary/90 transition text-sm"
+          >
+            Access Identity & Role Portals &rarr;
+          </a>
+        </div>
       </section>
 
       <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
