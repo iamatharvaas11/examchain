@@ -14,3 +14,4 @@ public interface SubjectRepository extends JpaRepository<SubjectEntity, UUID> {
     Optional<SubjectEntity> findByExamIdAndSubjectCode(UUID examId, String subjectCode);
     boolean existsByExamIdAndSubjectCode(UUID examId, String subjectCode);
 }
+

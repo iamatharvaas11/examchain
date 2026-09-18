@@ -17,3 +17,4 @@ public interface QuestionPoolRepository extends JpaRepository<QuestionPoolEntity
     Optional<QuestionPoolEntity> findBySubjectIdAndPoolCode(UUID subjectId, String poolCode);
     boolean existsBySubjectIdAndPoolCode(UUID subjectId, String poolCode);
 }
+

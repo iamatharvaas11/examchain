@@ -16,3 +16,4 @@ public interface SetterAssignmentRepository extends JpaRepository<SetterAssignme
     Optional<SetterAssignmentEntity> findBySubjectIdAndSetterId(UUID subjectId, String setterId);
     boolean existsBySubjectIdAndSetterIdAndStatus(UUID subjectId, String setterId, AssignmentStatus status);
 }
+

@@ -12,3 +12,4 @@ public interface ExamRepository extends JpaRepository<ExamEntity, UUID> {
     Optional<ExamEntity> findByExamCode(String examCode);
     boolean existsByExamCode(String examCode);
 }
+

@@ -61,3 +61,4 @@ public class ExamDtos {
             Instant updatedAt
     ) {}
 }
+

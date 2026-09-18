@@ -16,3 +16,4 @@ public interface QuestionRepository extends JpaRepository<QuestionEntity, UUID> 
     boolean existsByQuestionId(String questionId);
     long countByPoolId(UUID poolId);
 }
+

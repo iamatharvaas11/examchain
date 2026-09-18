@@ -78,3 +78,4 @@ CREATE TABLE IF NOT EXISTS questions (
 CREATE INDEX IF NOT EXISTS idx_questions_pool ON questions(pool_id);
 CREATE INDEX IF NOT EXISTS idx_questions_subject ON questions(subject_id);
 CREATE INDEX IF NOT EXISTS idx_questions_business_id ON questions(question_id);
+

@@ -80,3 +80,4 @@ public class ExamController {
         return ResponseEntity.ok(ApiResponse.success("Assignments retrieved", response));
     }
 }
+

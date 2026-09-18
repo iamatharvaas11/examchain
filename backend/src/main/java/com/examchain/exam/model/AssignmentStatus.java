@@ -4,3 +4,4 @@ public enum AssignmentStatus {
     ACTIVE,
     REVOKED
 }
+
