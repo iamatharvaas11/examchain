@@ -5,6 +5,7 @@ public enum ReleaseStatus {
     THRESHOLD_MET,
     RELEASED,
     EXPIRED,
-    QUARANTINED
+    QUARANTINED,
+    REPLACED
 }
 
