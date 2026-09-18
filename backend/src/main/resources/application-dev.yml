@@ -1,10 +1,21 @@
 spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:examchain;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE}
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: false
   flyway:
     clean-disabled: false
+    enabled: false
 
 logging:
   level:
     com.examchain: DEBUG
+    com.examchain: INFO
     org.springframework.web: INFO
+
