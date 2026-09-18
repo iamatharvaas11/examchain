@@ -16,3 +16,4 @@ CREATE TABLE IF NOT EXISTS paper_provenance (
 
 CREATE INDEX IF NOT EXISTS idx_provenance_trace_id ON paper_provenance(trace_id);
 CREATE INDEX IF NOT EXISTS idx_provenance_paper_id ON paper_provenance(paper_id);
+

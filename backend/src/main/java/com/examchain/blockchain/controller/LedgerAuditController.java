@@ -34,3 +34,4 @@ public class LedgerAuditController {
         return ResponseEntity.ok(ApiResponse.success("Ledger transactions retrieved for entity " + entityId, transactions));
     }
 }
+

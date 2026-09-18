@@ -141,3 +141,4 @@ class FabricLedgerIntegrationTest {
         assertThat(results.get(1).txId()).isEqualTo("tx-1");
     }
 }
+

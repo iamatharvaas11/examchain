@@ -15,3 +15,4 @@ CREATE TABLE IF NOT EXISTS ledger_transactions (
 CREATE INDEX IF NOT EXISTS idx_ledger_tx_name ON ledger_transactions(transaction_name);
 CREATE INDEX IF NOT EXISTS idx_ledger_entity_id ON ledger_transactions(entity_id);
 CREATE INDEX IF NOT EXISTS idx_ledger_status ON ledger_transactions(status);
+

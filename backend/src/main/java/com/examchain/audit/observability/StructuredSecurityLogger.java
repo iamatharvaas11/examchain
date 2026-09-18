@@ -35,3 +35,4 @@ public class StructuredSecurityLogger {
         log.info("{}", structuredJson);
     }
 }
+

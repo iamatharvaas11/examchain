@@ -12,3 +12,4 @@ public interface OfflineTokenRepository extends JpaRepository<OfflineTokenEntity
     Optional<OfflineTokenEntity> findByTokenHash(String tokenHash);
     Optional<OfflineTokenEntity> findByTokenId(String tokenId);
 }
+

@@ -1,7 +1,5 @@
-import React from 'react';
 import React, { useState } from 'react';
 import { useAuth } from '../../auth/context/AuthContext';
-import { ShieldCheck, ArrowLeft } from 'lucide-react';
 import { ShieldCheck, ArrowLeft, PlusCircle, CheckCircle2, XCircle, Send, Hash, BookOpen, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +11,6 @@ interface PortalViewProps {
   children?: React.ReactNode;
 }
 
-const PortalView: React.FC<PortalViewProps> = ({ title, roleBadge, description, boundaryNote }) => {
 const PortalView: React.FC<PortalViewProps> = ({ title, roleBadge, description, boundaryNote, children }) => {
   const { user } = useAuth();
 
@@ -28,7 +25,6 @@ const PortalView: React.FC<PortalViewProps> = ({ title, roleBadge, description, 
         </span>
       </div>
 
-      <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
       <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm">
         <div className="inline-flex p-3 bg-emerald-50 text-emerald-600 rounded-xl mb-4">
           <ShieldCheck className="w-8 h-8" />
@@ -36,15 +32,12 @@ const PortalView: React.FC<PortalViewProps> = ({ title, roleBadge, description, 
         <h1 className="text-2xl font-bold text-slate-900">{title}</h1>
         <p className="text-slate-600 mt-2">{description}</p>
 
-        <div className="mt-6 p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-          <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Security Perimeter Boundary</div>
         <div className="mt-4 p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
           <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Security Perimeter Boundary</div>
           <p className="text-xs text-slate-600 font-mono">{boundaryNote}</p>
         </div>
 
         {user && (
-          <div className="mt-4 text-xs text-slate-400">
           <div className="mt-3 text-xs text-slate-400">
             Authenticated caller: <span className="font-semibold text-slate-700">{user.displayName}</span> ({user.roles.join(', ')})
           </div>
@@ -65,14 +58,6 @@ export const AdminPortalPage: React.FC = () => (
   />
 );
 
-export const AuthorityPortalPage: React.FC = () => (
-  <PortalView
-    title="Examination Authority & Controller Portal"
-    roleBadge="EXAM_AUTHORITY / CONTROLLER"
-    description="Exam cycle initialization, paper blueprint approvals, time-lock scheduling, and multi-signature release authorisations."
-    boundaryNote="Endpoints under /api/v1/authority/** enforce quorum authorisations. Dual-signature requirements between Authority and Controller are mandated in Phase 4."
-  />
-);
 export const AuthorityPortalPage: React.FC = () => {
   const [examCode, setExamCode] = useState('EXAM-2026-CS');
   const [examTitle, setExamTitle] = useState('Computer Science Final Tripos');
@@ -80,14 +65,6 @@ export const AuthorityPortalPage: React.FC = () => {
   const [createdExams, setCreatedExams] = useState<string[]>(['EXAM-2026-CS (Active)']);
   const [feedback, setFeedback] = useState<string | null>(null);
 
-export const SetterPortalPage: React.FC = () => (
-  <PortalView
-    title="Blind Paper Setter Portal"
-    roleBadge="PAPER_SETTER"
-    description="Isolated question item authoring, blind pool contributions, and zero-knowledge question tagging."
-    boundaryNote="Endpoints under /api/v1/setter/** allow blind question ingestion only. Setters cannot view assembled final papers or centre allocations."
-  />
-);
   const handleCreateExam = (e: React.FormEvent) => {
     e.preventDefault();
     if (!examCode.trim() || !examTitle.trim()) return;

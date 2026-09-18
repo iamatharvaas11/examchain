@@ -79,3 +79,4 @@ public class SecurityMetricsService {
         return counter != null ? counter.count() : 0.0;
     }
 }
+

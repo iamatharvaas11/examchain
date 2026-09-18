@@ -16,3 +16,4 @@ public class TraceIdGenerator {
         return "TRC-" + HexFormat.of().formatHex(bytes).toUpperCase();
     }
 }
+

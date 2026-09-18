@@ -30,3 +30,4 @@ public class PaperProvenanceAuthorityController {
                 .body(ApiResponse.success("Paper trace generated successfully", response));
     }
 }
+

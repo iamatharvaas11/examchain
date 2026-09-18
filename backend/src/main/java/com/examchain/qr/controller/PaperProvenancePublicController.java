@@ -41,3 +41,4 @@ public class PaperProvenancePublicController {
         return ResponseEntity.ok(ApiResponse.success("Verification query processed", response));
     }
 }
+

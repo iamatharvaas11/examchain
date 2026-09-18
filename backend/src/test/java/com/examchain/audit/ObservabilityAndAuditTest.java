@@ -94,3 +94,4 @@ class ObservabilityAndAuditTest {
         assertThat(subsystems.get("ledgerConnectivity")).isEqualTo("CONNECTED_LOCAL_MIRROR");
     }
 }
+

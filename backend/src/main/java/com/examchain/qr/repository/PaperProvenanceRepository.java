@@ -12,3 +12,4 @@ public interface PaperProvenanceRepository extends JpaRepository<PaperProvenance
     Optional<PaperProvenanceEntity> findByTraceId(String traceId);
     Optional<PaperProvenanceEntity> findByPaperId(String paperId);
 }
+

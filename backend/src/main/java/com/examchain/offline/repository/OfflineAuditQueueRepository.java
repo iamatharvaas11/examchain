@@ -12,3 +12,4 @@ public interface OfflineAuditQueueRepository extends JpaRepository<OfflineAuditQ
     List<OfflineAuditQueueEntity> findByCentreCodeAndSyncedFalseOrderByCreatedAtAsc(String centreCode);
     List<OfflineAuditQueueEntity> findByCentreCodeOrderByCreatedAtDesc(String centreCode);
 }
+

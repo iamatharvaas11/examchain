@@ -28,3 +28,4 @@ CREATE TABLE IF NOT EXISTS offline_audit_queue (
 CREATE INDEX IF NOT EXISTS idx_offline_token_hash ON offline_authorization_tokens(token_hash);
 CREATE INDEX IF NOT EXISTS idx_offline_queue_centre ON offline_audit_queue(centre_code);
 CREATE INDEX IF NOT EXISTS idx_offline_queue_synced ON offline_audit_queue(synced);
+

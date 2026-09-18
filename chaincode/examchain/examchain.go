@@ -388,3 +388,4 @@ func main() {
 		fmt.Printf("Error starting examchain chaincode: %s\n", err.Error())
 	}
 }
+

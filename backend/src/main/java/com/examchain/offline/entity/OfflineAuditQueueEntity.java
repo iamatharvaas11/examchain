@@ -116,3 +116,4 @@ public class OfflineAuditQueueEntity {
         this.createdAt = createdAt;
     }
 }
+

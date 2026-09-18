@@ -36,3 +36,4 @@ public class BlockchainDtos {
             List<String> accessLogs
     ) {}
 }
+

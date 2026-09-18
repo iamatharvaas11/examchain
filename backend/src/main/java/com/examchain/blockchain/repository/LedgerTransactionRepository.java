@@ -13,3 +13,4 @@ public interface LedgerTransactionRepository extends JpaRepository<LedgerTransac
     List<LedgerTransactionEntity> findByStatus(LedgerTransactionStatus status);
     List<LedgerTransactionEntity> findAllByOrderByCreatedAtDesc();
 }
+

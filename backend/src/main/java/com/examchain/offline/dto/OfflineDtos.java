@@ -62,3 +62,4 @@ public class OfflineDtos {
             Instant syncedAt
     ) {}
 }
+
