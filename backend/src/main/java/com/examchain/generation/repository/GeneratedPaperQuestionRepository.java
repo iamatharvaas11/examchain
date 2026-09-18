@@ -11,3 +11,4 @@ import java.util.UUID;
 public interface GeneratedPaperQuestionRepository extends JpaRepository<GeneratedPaperQuestionEntity, UUID> {
     List<GeneratedPaperQuestionEntity> findByPaperIdOrderBySequenceNumberAsc(UUID paperId);
 }
+

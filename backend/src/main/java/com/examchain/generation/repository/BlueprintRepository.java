@@ -14,3 +14,4 @@ public interface BlueprintRepository extends JpaRepository<BlueprintEntity, UUID
     Optional<BlueprintEntity> findByBlueprintCode(String blueprintCode);
     boolean existsByBlueprintCode(String blueprintCode);
 }
+

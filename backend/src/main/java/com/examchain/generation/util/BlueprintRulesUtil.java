@@ -76,3 +76,4 @@ public class BlueprintRulesUtil {
         return end != -1 ? str.substring(idx, end) : "";
     }
 }
+

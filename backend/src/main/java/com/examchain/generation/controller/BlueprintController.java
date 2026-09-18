@@ -59,3 +59,4 @@ public class BlueprintController {
         return ResponseEntity.ok(ApiResponse.success("Paper details retrieved", response));
     }
 }
+

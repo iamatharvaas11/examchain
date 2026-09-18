@@ -86,3 +86,4 @@ public class GeneratedPaperQuestionEntity {
     public int getAllocatedMarks() { return allocatedMarks; }
     public void setAllocatedMarks(int allocatedMarks) { this.allocatedMarks = allocatedMarks; }
 }
+

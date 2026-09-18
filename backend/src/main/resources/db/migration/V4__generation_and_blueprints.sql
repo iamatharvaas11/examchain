@@ -44,3 +44,4 @@ CREATE TABLE IF NOT EXISTS generated_paper_questions (
 );
 
 CREATE INDEX IF NOT EXISTS idx_paper_questions_paper ON generated_paper_questions(paper_id);
+

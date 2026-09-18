@@ -14,3 +14,4 @@ public interface GeneratedPaperRepository extends JpaRepository<GeneratedPaperEn
     Optional<GeneratedPaperEntity> findByPaperId(String paperId);
     boolean existsByPaperId(String paperId);
 }
+
